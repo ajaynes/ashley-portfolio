@@ -1,21 +1,21 @@
 ---
 type: "portfolio"
-title: "Dauntless UI"
-slug: /portfolio/dauntless-ui
-listing: 1
+title: "SmartLok UI"
+slug: /portfolio/smartlok-ui
+listing: 2
+topCategory: "smartlok"
 ---
 
 [//]: # "This is going to have the images and classes for the images to make them layout properly. the main portfolio page will have the featured images laid out as well"
 
 <div class="row">
 <div class="col-12">
-![alt text](../../images/dashboard-dauntless.png "Dauntless dashboard")
+![alt text](../../images/dashboard-smartlok.png "SmartLok dashboard")
 </div>
 <div class="col-12">
-![alt text](../../images/marketplace-dauntless.png "Dauntless marketplace page")
+![alt text](../../images/tenants-smartlok.png "SmartLok tenants page")
 </div>
 <div class="col-12">
-![alt text](../../images/detail-dauntless.png "Dauntless product details page")
+![alt text](../../images/mobile-access-smartlok.png "SmartLok mobile app")
 </div>
-
 </div>

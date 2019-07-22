@@ -19,6 +19,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    //`gatsby-plugin-mdx`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -32,12 +33,6 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-transformer-remark",
-      options: {
-        plugins: [], // just in case those previously mentioned remark plugins sound cool :)
-      },
-    },
-    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
@@ -48,6 +43,7 @@ module.exports = {
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
               maxWidth: 590,
+              linkImagesToOriginal: false,
             },
           },
         ],

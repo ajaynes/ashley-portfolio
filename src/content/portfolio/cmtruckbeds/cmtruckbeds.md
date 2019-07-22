@@ -3,6 +3,7 @@ type: "portfolio"
 title: "CM Truck Beds Website"
 slug: /portfolio/cm-truck-beds-site
 listing: 4
+topCategory: "cmtruckbeds"
 ---
 
 [//]: # "This is going to have the images and classes for the images to make them layout properly. the main portfolio page will have the featured images laid out as well"

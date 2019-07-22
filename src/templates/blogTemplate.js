@@ -22,6 +22,7 @@ export const query = graphql`
   query($topCategory: String) {
     portfolioimages: allMarkdownRemark(
       filter: { frontmatter: { category: { eq: $topCategory } } }
+      sort: { fields: frontmatter___listing, order: ASC }
     ) {
       edges {
         node {

@@ -7,15 +7,13 @@ import SEO from "../components/seo"
 const SecondPage = ({ data }) => (
   <Layout>
     <div>Portfolio Page</div>
-    {console.log(data)}
-
     {data.allMarkdownRemark.edges.map(edge => (
-      <>
+      <div key={edge.node.id}>
         <div>{edge.node.frontmatter.title}</div>
         <Link to={edge.node.frontmatter.link}>
           <div dangerouslySetInnerHTML={{ __html: edge.node.html }} />
         </Link>
-      </>
+      </div>
     ))}
   </Layout>
 )
@@ -31,6 +29,7 @@ export const query = graphql`
             link
           }
           html
+          id
         }
       }
     }

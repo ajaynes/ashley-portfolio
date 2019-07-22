@@ -2,12 +2,17 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 export default ({ data }) => {
-  const posts = data.allMarkdownRemark.edges
-  console.log(posts)
+  const posts = data.portfolioimages.edges
+  const about = data.about
+  console.log(data)
   return (
     <Layout>
+      <h1>{about.frontmatter.title}</h1>
+      <div dangerouslySetInnerHTML={{ __html: about.html }} />
       {posts.map(post => (
-        <div dangerouslySetInnerHTML={{ __html: post.node.html }} />
+        <div key={post.node.id}>
+          <div dangerouslySetInnerHTML={{ __html: post.node.html }} />
+        </div>
       ))}
     </Layout>
   )
@@ -15,7 +20,7 @@ export default ({ data }) => {
 
 export const query = graphql`
   query($topCategory: String) {
-    allMarkdownRemark(
+    portfolioimages: allMarkdownRemark(
       filter: { frontmatter: { category: { eq: $topCategory } } }
     ) {
       edges {
@@ -24,6 +29,12 @@ export const query = graphql`
           html
         }
       }
+    }
+    about: markdownRemark(frontmatter: { topCategory: { eq: $topCategory } }) {
+      frontmatter {
+        title
+      }
+      html
     }
   }
 `

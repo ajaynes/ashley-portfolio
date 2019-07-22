@@ -10,6 +10,7 @@ exports.createPages = async function({ actions, graphql }) {
           node {
             frontmatter {
               slug
+              topCategory
             }
           }
         }
@@ -18,10 +19,11 @@ exports.createPages = async function({ actions, graphql }) {
   `)
   data.allMarkdownRemark.edges.forEach(edge => {
     const slug = edge.node.frontmatter.slug
+    const topCategory = edge.node.frontmatter.topCategory
     actions.createPage({
       path: slug,
       component: require.resolve(`./src/templates/blogTemplate.js`),
-      context: { slug: slug },
+      context: { slug: slug, topCategory: topCategory },
     })
   })
 }

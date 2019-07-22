@@ -2,23 +2,27 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 export default ({ data }) => {
-  const post = data.markdownRemark
-  console.log(data)
+  const posts = data.allMarkdownRemark.edges
+  console.log(posts)
   return (
     <Layout>
-      <div>
-        <h1>{post.frontmatter.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </div>
+      {posts.map(post => (
+        <div dangerouslySetInnerHTML={{ __html: post.node.html }} />
+      ))}
     </Layout>
   )
 }
+
 export const query = graphql`
-  query($slug: String!) {
-    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
-      html
-      frontmatter {
-        title
+  query($topCategory: String) {
+    allMarkdownRemark(
+      filter: { frontmatter: { category: { eq: $topCategory } } }
+    ) {
+      edges {
+        node {
+          id
+          html
+        }
       }
     }
   }

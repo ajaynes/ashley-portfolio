@@ -1,4 +1,46 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700|Poppins:400,700&display=swap");
+
+$body-family: "Poppins";
+$family-primary: "Lato";
+$red: #d83737;
+$body-background-color: #dbdbdb;
+$text: #777777;
+$grey-darker: #3a3434;
+$link: $red;
+$link-hover: darken($link, 10%);
+//$card-shadow: none;
+$menu-item-hover-color: #ffffff;
+$menu-item-hover-background-color: $red;
+$menu-item-active-background-color: $red;
+$menu-item-radius: 0;
+$menu-list-link-padding: 0.75em;
+
 @import "~bulma/bulma.sass";
+$menu-item-color: $grey;
+.menu-list a {
+  background-color: $grey-darker;
+}
+.break {
+  border-bottom: 1px solid $body-background-color;
+  padding: 30px 24px 2px;
+  position: relative;
+}
+
+.break::after {
+  position: absolute;
+  content: "";
+  background-color: $red;
+  width: 40px;
+  height: 5px;
+  bottom: -3px;
+  left: 24px;
+}
+
+.dates::before {
+  font-family: "fontello";
+  content: "\e801";
+  margin-right: 5px;
+}
 
 @font-face {
   font-family: "fontello";

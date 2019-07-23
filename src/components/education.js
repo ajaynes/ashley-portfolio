@@ -24,15 +24,21 @@ export default () => (
       }
     `}
     render={data => (
-      <header>
-        <h1>Education</h1>
-        <div>
+      <>
+        <h3 className="break is-uppercase has-text-weight-bold is-size-6 has-text-black">
+          Education
+        </h3>
+        <div className="card-content">
           {data.allMarkdownRemark.edges.map(edge => {
             return (
               <div key={edge.node.id}>
-                <h3>{edge.node.frontmatter.title}</h3>
-                <div className="title">{edge.node.frontmatter.position}</div>
-                <div className="dates">{edge.node.frontmatter.dates}</div>
+                <h3 className="is-size-5 has-text-weight-bold has-text-black">
+                  {edge.node.frontmatter.position} -{" "}
+                  {edge.node.frontmatter.title}
+                </h3>
+                <div className="dates is-italic">
+                  {edge.node.frontmatter.dates}
+                </div>
                 <div
                   key={edge.node.id}
                   dangerouslySetInnerHTML={{ __html: edge.node.html }}
@@ -41,7 +47,7 @@ export default () => (
             )
           })}
         </div>
-      </header>
+      </>
     )}
   />
 )

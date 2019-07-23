@@ -7,13 +7,20 @@ export default ({ data }) => {
   console.log(data)
   return (
     <Layout>
-      <h1>{about.frontmatter.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: about.html }} />
-      {posts.map(post => (
-        <div key={post.node.id}>
-          <div dangerouslySetInnerHTML={{ __html: post.node.html }} />
-        </div>
-      ))}
+      <h3 className="break is-uppercase has-text-weight-bold is-size-6 has-text-black">
+        {about.frontmatter.title}
+      </h3>
+      <div className="card-content">
+        <div dangerouslySetInnerHTML={{ __html: about.html }} />
+        {posts.map(post => (
+          <div className="card" key={post.node.id}>
+            <div
+              className="card-content"
+              dangerouslySetInnerHTML={{ __html: post.node.html }}
+            />
+          </div>
+        ))}
+      </div>
     </Layout>
   )
 }

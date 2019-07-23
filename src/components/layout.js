@@ -29,14 +29,20 @@ const Layout = ({ children }) => {
     <>
       {/*<Header siteTitle={data.site.siteMetadata.title} />*/}
       <div className="container">
-        <Sidebar />
-
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        <div className="columns is-variable is-2-tablet is-2-desktop is-2-widescreen is-4-fullhd">
+          <div className="column is-one-quarter">
+            <div className="card" style={{ position: "sticky", top: 25 }}>
+              <div className="card-content">
+                <Sidebar />
+              </div>
+            </div>
+          </div>
+          <div className="column">
+            <div className="card" style={{ marginTop: 25 }}>
+              <main>{children}</main>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   )

@@ -6,15 +6,27 @@ import SEO from "../components/seo"
 
 const SecondPage = ({ data }) => (
   <Layout>
-    <div>Portfolio Page</div>
-    {data.allMarkdownRemark.edges.map(edge => (
-      <div key={edge.node.id}>
-        <div>{edge.node.frontmatter.title}</div>
-        <Link to={edge.node.frontmatter.link}>
-          <div dangerouslySetInnerHTML={{ __html: edge.node.html }} />
-        </Link>
+    <h3 className="break is-uppercase has-text-weight-bold is-size-6 has-text-black">
+      Portfolio
+    </h3>
+    <div className="card-content">
+      <div className="columns is-multiline">
+        {data.allMarkdownRemark.edges.map(edge => (
+          <div className="column is-half">
+            <div className="card" key={edge.node.id}>
+              <Link to={edge.node.frontmatter.link}>
+                <header class="card-header">
+                  <p class="card-header-title">{edge.node.frontmatter.title}</p>
+                </header>
+                <div className="card-image">
+                  <div dangerouslySetInnerHTML={{ __html: edge.node.html }} />
+                </div>
+              </Link>
+            </div>
+          </div>
+        ))}
       </div>
-    ))}
+    </div>
   </Layout>
 )
 

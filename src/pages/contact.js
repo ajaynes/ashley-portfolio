@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import * as emailjs from "emailjs-com"
+import Layout from "../components/layout"
 
 class Contact extends Component {
   state = {
@@ -28,37 +29,85 @@ class Contact extends Component {
   render() {
     if (this.state.success === 2) {
       return (
-        <div style={{ paddingLeft: 40, paddingRight: 40 }}>
-          <div>Success!</div>
-          <div>Your message has been sent!</div>
-        </div>
+        <Layout>
+          <div className="card-content">
+            <div class="notification is-success">
+              <strong>SUCCESS!</strong>
+              <p>Your message has been sent!</p>
+            </div>
+          </div>
+        </Layout>
       )
     }
     if (this.state.success === 3) {
       return (
-        <div style={{ paddingLeft: 40, paddingRight: 40 }}>
-          <div>Uh Oh!</div>
-          <div>Something went wrong :(. Try again.</div>
-        </div>
+        <Layout>
+          <div className="card-content">
+            <div class="notification is-danger">
+              <strong>UH OH!</strong>
+              <p>Something went wrong. Your message was NOT sent</p>
+            </div>
+          </div>
+        </Layout>
       )
     }
     return (
       <>
-        <form
-          onSubmit={this.emailContact}
-          id="myForm"
-          style={{
-            paddingLeft: 32,
-            paddingRight: 32,
-          }}
-        >
-          <input type="email" name="email_address" placeholder="Email" />
-          <input type="text" name="from_name" placeholder="Name" />
-          <textarea name="message_html" rows="4" cols="50" />
-          <button type="primary" type="submit" size="large">
-            Send Your Message
-          </button>
-        </form>
+        <Layout>
+          <div className="card-content">
+            <form
+              onSubmit={this.emailContact}
+              id="myForm"
+              style={{
+                paddingLeft: 32,
+                paddingRight: 32,
+              }}
+            >
+              <div class="field">
+                <label class="label">Email</label>
+                <div class="control">
+                  <input
+                    class="input"
+                    type="text"
+                    name="email_address"
+                    placeholder="Email"
+                  />
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Name</label>
+                <div class="control">
+                  <input
+                    class="input"
+                    type="text"
+                    name="from_name"
+                    placeholder="Name"
+                  />
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Message</label>
+                <div class="control">
+                  <textarea
+                    class="textarea"
+                    placeholder="Textarea"
+                    name="message_html"
+                  ></textarea>
+                </div>
+              </div>
+
+              <div className="field">
+                <div class="control">
+                  <button class="button is-link" type="submit">
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </Layout>
       </>
     )
   }

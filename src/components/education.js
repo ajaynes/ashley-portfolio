@@ -29,23 +29,25 @@ export default () => (
           Education
         </h3>
         <div className="card-content">
-          {data.allMarkdownRemark.edges.map(edge => {
-            return (
-              <div key={edge.node.id}>
-                <h3 className="is-size-5 has-text-weight-bold has-text-black">
-                  {edge.node.frontmatter.position} -{" "}
-                  {edge.node.frontmatter.title}
-                </h3>
-                <div className="dates is-italic">
-                  {edge.node.frontmatter.dates}
+          <div className="timeline education">
+            {data.allMarkdownRemark.edges.map(edge => {
+              return (
+                <div key={edge.node.id} className="entry">
+                  <h3 className="is-size-5 has-text-weight-bold has-text-black">
+                    {edge.node.frontmatter.position} -{" "}
+                    {edge.node.frontmatter.title}
+                  </h3>
+                  <div className="dates has-text-weight-light">
+                    {edge.node.frontmatter.dates}
+                  </div>
+                  <div
+                    key={edge.node.id}
+                    dangerouslySetInnerHTML={{ __html: edge.node.html }}
+                  />
                 </div>
-                <div
-                  key={edge.node.id}
-                  dangerouslySetInnerHTML={{ __html: edge.node.html }}
-                />
-              </div>
-            )
-          })}
+              )
+            })}
+          </div>
         </div>
       </>
     )}

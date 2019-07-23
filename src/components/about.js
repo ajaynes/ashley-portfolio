@@ -20,17 +20,23 @@ export default () => (
           Who am I?
         </h3>
         <div className="card-content">
-          <h1 className="title is-uppercase has-text-black">
-            {data.markdownRemark.frontmatter.title}
-          </h1>
-          <h2 className="subtitle is-uppercase">
-            {data.markdownRemark.frontmatter.subtitle}
-          </h2>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: data.markdownRemark.html,
-            }}
-          />
+          <div className="content">
+            <h1 className="title is-uppercase has-text-black">
+              {data.markdownRemark.frontmatter.title}
+            </h1>
+            <h2
+              className="subtitle is-uppercase has-text-weight-normal is-size-4"
+              style={{ marginBottom: 15 }}
+            >
+              {data.markdownRemark.frontmatter.subtitle}
+            </h2>
+            <div
+              className="column-text"
+              dangerouslySetInnerHTML={{
+                __html: data.markdownRemark.html,
+              }}
+            />
+          </div>
         </div>
       </>
     )}

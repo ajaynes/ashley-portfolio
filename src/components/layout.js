@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Sidebar from "./sidebar"
+import Download from "./download"
 //import "./layout.css"
 import "./styles.scss"
 
@@ -40,6 +41,7 @@ const Layout = ({ children }) => {
           <div className="column">
             <div className="card" style={{ marginTop: 25 }}>
               <main>{children}</main>
+              <Download />
             </div>
           </div>
         </div>

@@ -6,4 +6,4 @@ listing: 3
 topCategory: "bigtex"
 ---
 
-Here's some text about this thing
+This website was part a rebranding of Big Tex. The website they had prior was 14+ years old. I designed and developed this site using WordPress as a CMS.

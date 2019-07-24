@@ -54,13 +54,21 @@ class Contact extends Component {
     return (
       <>
         <Layout>
-          <div className="card-content">
+          <h3 className="break is-uppercase has-text-weight-bold is-size-6 has-text-black">
+            Contact Me
+          </h3>
+          <div className="card-content content">
+            <p>
+              Want to hire me? Want to know more about me? Want to grab a
+              coffee? Send me a message below!
+            </p>
             <form
               onSubmit={this.emailContact}
               id="myForm"
               style={{
-                paddingLeft: 32,
-                paddingRight: 32,
+                padding: 15,
+                border: "1px solid #dbdbdb",
+                borderRadius: 10,
               }}
             >
               <div class="field">
@@ -100,7 +108,11 @@ class Contact extends Component {
 
               <div className="field">
                 <div class="control">
-                  <button class="button is-link" type="submit">
+                  <button
+                    class="button is-warning"
+                    type="submit"
+                    style={{ color: "#ffffff" }}
+                  >
                     Submit
                   </button>
                 </div>

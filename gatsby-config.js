@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: `/gatsby`,
   siteMetadata: {
     title: `Ashley Jaynes | Seattle Web Developer`,
     description: `The portfolio of Ashley Jaynes, a web developer and designer with over ten years' experience in building awesome stuff for the Internet.`,

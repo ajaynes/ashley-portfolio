@@ -33,7 +33,7 @@ h5 {
 
 body {
   @include mobile {
-    background-color: #ffffff;
+    background-color: #ffffff !important;
   }
 }
 
@@ -60,7 +60,12 @@ a:hover {
     margin-top: 0;
   }
 }
-
+.column.no-padding {
+  @include mobile {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
 @mixin break-line {
   position: absolute;
   content: "";

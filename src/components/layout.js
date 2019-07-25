@@ -31,8 +31,11 @@ const Layout = ({ children }) => {
     <>
       {/*<Header siteTitle={data.site.siteMetadata.title} />*/}
       <div className="container">
-        <div className="columns is-variable is-1-tablet is-2-desktop is-2-widescreen is-4-fullhd">
-          <div className="column is-one-quarter">
+        <div
+          className="columns is-variable is-1-mobile is-2-tablet is-2-desktop is-2-widescreen is-4-fullhd"
+          style={{ margin: 0 }}
+        >
+          <div className="column is-one-quarter no-padding">
             <div
               className="card card-margin"
               style={{ position: "sticky", top: 25 }}
@@ -42,7 +45,7 @@ const Layout = ({ children }) => {
               </div>
             </div>
           </div>
-          <div className="column">
+          <div className="column no-padding">
             <div className="card card-margin">
               <main>{children}</main>
               <Download />

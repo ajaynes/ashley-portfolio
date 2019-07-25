@@ -69,6 +69,7 @@ a:hover {
   height: 5px;
   bottom: -3px;
 }
+
 @mixin break {
   border-bottom: 1px solid $body-background-color;
   padding: 30px 24px 2px;
@@ -92,11 +93,11 @@ a:hover {
 
 .dates {
   font-size: 0.9rem;
-}
-.dates::before {
-  font-family: "fontello";
-  content: "\e801";
-  margin-right: 5px;
+  &::before {
+    font-family: "fontello";
+    content: "\e801";
+    margin-right: 5px;
+  }
 }
 
 .social li {

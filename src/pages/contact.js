@@ -3,6 +3,7 @@ import * as emailjs from "emailjs-com"
 import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Breadcrumbs from "../components/breadcrumbs"
+import SEO from "../components/seo"
 
 class Contact extends Component {
   state = {
@@ -30,6 +31,7 @@ class Contact extends Component {
     if (this.state.success === 2) {
       return (
         <Layout>
+          <SEO title="Contact" />
           <div className="card-content">
             <Breadcrumbs pagename="Contact" parent={false} />
             <div className="notification is-success">

@@ -6,6 +6,7 @@ import Breadcrumbs from "../components/breadcrumbs"
 
 const SecondPage = ({ data }) => (
   <Layout>
+    <SEO title="Portfolio" />
     <h3 className="break is-uppercase has-text-weight-bold is-size-6 has-text-black">
       Portfolio
     </h3>

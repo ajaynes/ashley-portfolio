@@ -4,4 +4,4 @@ listing: 3
 category: "dauntless"
 ---
 
-![alt text](detail-dauntless.png "Dauntless product details")
+![Dauntless product details](detail-dauntless.png)

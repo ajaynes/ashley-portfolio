@@ -35,7 +35,7 @@ export default () => (
             </a>
           </li>
         </ul>
-        <footer>
+        <footer className="has-text-centered">
           © {new Date().getFullYear()},{` `}
           <a href="https://ashleyjaynes.com">Ashley Jaynes</a>
         </footer>

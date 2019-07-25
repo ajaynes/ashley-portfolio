@@ -4,4 +4,4 @@ listing: 2
 category: "dauntless"
 ---
 
-![alt text](marketplace-dauntless.png "Dauntless marketplace")
+![Dauntless marketplace](marketplace-dauntless.png)

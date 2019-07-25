@@ -4,4 +4,4 @@ listing: 2
 category: "smartlok"
 ---
 
-![alt text](tenants-smartlok.png "SmartLok tenants page")
+![SmartLok tenants page](tenants-smartlok.png)

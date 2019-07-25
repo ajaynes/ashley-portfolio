@@ -1,8 +1,8 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Breadcrumbs from "../components/breadcrumbs"
 
 const SecondPage = ({ data }) => (
   <Layout>
@@ -10,13 +10,16 @@ const SecondPage = ({ data }) => (
       Portfolio
     </h3>
     <div className="card-content">
+      <Breadcrumbs pagename="Portfolio" parent={false} />
       <div className="columns is-multiline">
         {data.allMarkdownRemark.edges.map(edge => (
-          <div className="column is-half">
-            <div className="card" key={edge.node.id}>
+          <div className="column is-half" key={edge.node.id}>
+            <div className="card">
               <Link to={edge.node.frontmatter.link}>
-                <header class="card-header">
-                  <p class="card-header-title">{edge.node.frontmatter.title}</p>
+                <header className="card-header">
+                  <p className="card-header-title">
+                    {edge.node.frontmatter.title}
+                  </p>
                 </header>
                 <div className="card-image">
                   <div dangerouslySetInnerHTML={{ __html: edge.node.html }} />
@@ -33,7 +36,10 @@ const SecondPage = ({ data }) => (
 export default SecondPage
 export const query = graphql`
   query featuredQuery {
-    allMarkdownRemark(filter: { frontmatter: { type: { eq: "featured" } } }) {
+    allMarkdownRemark(
+      filter: { frontmatter: { type: { eq: "featured" } } }
+      sort: { fields: frontmatter___listing, order: ASC }
+    ) {
       edges {
         node {
           frontmatter {

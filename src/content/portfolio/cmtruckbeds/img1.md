@@ -4,4 +4,4 @@ listing: 1
 category: "cmtruckbeds"
 ---
 
-![alt text](home-cmtruckbeds.png "CM Truck Beds homepage")
+![CM Truck Beds homepage](home-cmtruckbeds.png)

@@ -1,6 +1,8 @@
 import React, { Component } from "react"
 import * as emailjs from "emailjs-com"
+import { Link } from "gatsby"
 import Layout from "../components/layout"
+import Breadcrumbs from "../components/breadcrumbs"
 
 class Contact extends Component {
   state = {
@@ -17,11 +19,9 @@ class Contact extends Component {
       )
       .then(
         response => {
-          console.log("SUCCESS!", response.status, response.text)
           this.setState({ success: 2 })
         },
         err => {
-          console.log("FAILED...", err)
           this.setState({ success: 3 })
         }
       )
@@ -31,9 +31,13 @@ class Contact extends Component {
       return (
         <Layout>
           <div className="card-content">
-            <div class="notification is-success">
+            <Breadcrumbs pagename="Contact" parent={false} />
+            <div className="notification is-success">
               <strong>SUCCESS!</strong>
               <p>Your message has been sent!</p>
+              <p>
+                <Link to="/">Go back</Link>
+              </p>
             </div>
           </div>
         </Layout>
@@ -43,9 +47,13 @@ class Contact extends Component {
       return (
         <Layout>
           <div className="card-content">
-            <div class="notification is-danger">
+            <Breadcrumbs pagename="Contact" parent={false} />
+            <div className="notification is-danger">
               <strong>UH OH!</strong>
               <p>Something went wrong. Your message was NOT sent</p>
+              <p>
+                <Link to="/">Go back</Link>
+              </p>
             </div>
           </div>
         </Layout>
@@ -57,6 +65,9 @@ class Contact extends Component {
           <h3 className="break is-uppercase has-text-weight-bold is-size-6 has-text-black">
             Contact Me
           </h3>
+          <div className="card-content" style={{ paddingBottom: 0 }}>
+            <Breadcrumbs pagename="Contact" parent={false} />
+          </div>
           <div className="card-content content">
             <p>
               Want to hire me? Want to know more about me? Want to grab a
@@ -71,11 +82,11 @@ class Contact extends Component {
                 borderRadius: 10,
               }}
             >
-              <div class="field">
-                <label class="label">Email</label>
-                <div class="control">
+              <div className="field">
+                <label className="label">Email</label>
+                <div className="control">
                   <input
-                    class="input"
+                    className="input"
                     type="text"
                     name="email_address"
                     placeholder="Email"
@@ -83,11 +94,11 @@ class Contact extends Component {
                 </div>
               </div>
 
-              <div class="field">
-                <label class="label">Name</label>
-                <div class="control">
+              <div className="field">
+                <label className="label">Name</label>
+                <div className="control">
                   <input
-                    class="input"
+                    className="input"
                     type="text"
                     name="from_name"
                     placeholder="Name"
@@ -95,11 +106,11 @@ class Contact extends Component {
                 </div>
               </div>
 
-              <div class="field">
-                <label class="label">Message</label>
-                <div class="control">
+              <div className="field">
+                <label className="label">Message</label>
+                <div className="control">
                   <textarea
-                    class="textarea"
+                    className="textarea"
                     placeholder="Textarea"
                     name="message_html"
                   ></textarea>
@@ -107,9 +118,9 @@ class Contact extends Component {
               </div>
 
               <div className="field">
-                <div class="control">
+                <div className="control">
                   <button
-                    class="button is-warning"
+                    className="button is-warning"
                     type="submit"
                     style={{ color: "#ffffff" }}
                   >

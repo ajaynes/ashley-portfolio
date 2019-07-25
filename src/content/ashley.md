@@ -2,4 +2,4 @@
 type: "ashley"
 ---
 
-![alt text](../images/ashley-pic.jpg "Ashley Jaynes' profile picture")
+![Ashley Jaynes' profile picture](../images/ashley-pic.jpg)

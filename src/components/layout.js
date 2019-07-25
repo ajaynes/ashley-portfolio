@@ -8,6 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { VerticleButton as ScrollUpButton } from "react-scroll-up-button"
 
 import Header from "./header"
 import Sidebar from "./sidebar"
@@ -30,20 +31,26 @@ const Layout = ({ children }) => {
     <>
       {/*<Header siteTitle={data.site.siteMetadata.title} />*/}
       <div className="container">
-        <div className="columns is-variable is-2-tablet is-2-desktop is-2-widescreen is-4-fullhd">
+        <div className="columns is-variable is-1-tablet is-2-desktop is-2-widescreen is-4-fullhd">
           <div className="column is-one-quarter">
-            <div className="card" style={{ position: "sticky", top: 25 }}>
+            <div
+              className="card card-margin"
+              style={{ position: "sticky", top: 25 }}
+            >
               <div className="card-content">
                 <Sidebar />
               </div>
             </div>
           </div>
           <div className="column">
-            <div className="card" style={{ marginTop: 25 }}>
+            <div className="card card-margin">
               <main>{children}</main>
               <Download />
             </div>
           </div>
+        </div>
+        <div className="is-hidden-touch">
+          <ScrollUpButton />
         </div>
       </div>
     </>

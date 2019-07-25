@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import Breadcrumbs from "../components/breadcrumbs"
 export default ({ data }) => {
   const posts = data.portfolioimages.edges
   const about = data.about
@@ -10,6 +11,7 @@ export default ({ data }) => {
         {about.frontmatter.title}
       </h3>
       <div className="card-content">
+        <Breadcrumbs pagename={about.frontmatter.title} parent={true} />
         <div
           className="content"
           dangerouslySetInnerHTML={{ __html: about.html }}

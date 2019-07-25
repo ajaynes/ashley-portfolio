@@ -4,22 +4,22 @@ $body-family: "Poppins";
 $family-primary: "Lato";
 $red: #d83737;
 $body-background-color: #dbdbdb;
-$text: #777777;
+$text: #757575;
 $grey-darker: #3a3434;
 $warning: $grey-darker;
 $link: $red;
-$link-hover: darken($link, 10%);
-//$card-shadow: none;
+$link-hover: darken($link, 20%);
 $menu-item-hover-color: #ffffff;
 $menu-item-hover-background-color: $red;
 $menu-item-active-background-color: $red;
 $menu-item-radius: 0;
 $menu-list-link-padding: 0.75em;
+$menu-item-color: #a5a3a3;
 
 @import "~bulma/bulma.sass";
-$menu-item-color: $grey;
 .menu-list a {
   background-color: $grey-darker;
+  border-bottom: 1px solid darken($grey-darker, 20%);
 }
 
 h1,
@@ -31,9 +31,34 @@ h5 {
   font-family: $family-primary;
 }
 
+body {
+  @include mobile {
+    background-color: #ffffff;
+  }
+}
+
+a:hover {
+  transition: all 0.5s ease;
+}
 .column-text {
   column-width: auto;
   column-count: 2;
+  @include mobile {
+    column-count: 1;
+  }
+}
+
+.card.card-margin {
+  @include mobile {
+    box-shadow: none;
+  }
+}
+
+.card-margin {
+  margin-top: 25px;
+  @include mobile {
+    margin-top: 0;
+  }
 }
 
 @mixin break-line {

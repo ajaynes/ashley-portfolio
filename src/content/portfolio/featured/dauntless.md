@@ -2,6 +2,7 @@
 type: "featured"
 title: Dauntless UI
 link: "/portfolio/dauntless-ui"
+listing: 1
 ---
 
-![alt text](featured-dauntless.png "Dauntless featured image")
+![Dauntless featured image](featured-dauntless.png)

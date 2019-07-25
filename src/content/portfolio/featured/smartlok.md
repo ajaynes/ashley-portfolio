@@ -2,6 +2,7 @@
 type: "featured"
 title: SmartLok UI
 link: "/portfolio/smartlok-ui/"
+listing: 2
 ---
 
-![alt text](featured-smartlok.png "SmartLok featured image")
+![SmartLok featured image](featured-smartlok.png)

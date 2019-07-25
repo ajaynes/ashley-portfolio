@@ -3,6 +3,7 @@ type: "featured"
 subtype: "bigtex"
 title: Big Tex Trailers Website
 link: "/portfolio/big-tex-site"
+listing: 3
 ---
 
-![alt text](featured-bigtex.png "Big Tex Trailers featured image")
+![Big Tex Trailers featured image](featured-bigtex.png)

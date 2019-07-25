@@ -4,4 +4,4 @@ listing: 2
 category: "bigtex"
 ---
 
-![alt text](products-bigtex.png "Big Tex Trailers product listing")
+![Big Tex Trailers product listing](products-bigtex.png)

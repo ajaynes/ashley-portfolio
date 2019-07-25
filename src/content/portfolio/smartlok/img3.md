@@ -4,4 +4,4 @@ listing: 3
 category: "smartlok"
 ---
 
-![alt text](mobile-access-smartlok.png "SmartLok mobile app")
+![SmartLok mobile app](mobile-access-smartlok.png)

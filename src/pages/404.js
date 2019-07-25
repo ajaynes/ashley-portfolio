@@ -8,11 +8,11 @@ const NotFoundPage = () => (
   <Layout>
     <SEO title="404: Not found" />
     <h3 className="break is-uppercase has-text-weight-bold is-size-6 has-text-black">
-      Not Found
+      404 Not Found
     </h3>
     <div className="card-content">
       <p>
-        There doesn't appear to be anything here. <link to="/">Go back.</link>
+        There's nothing here. <Link to="/">Go Back</Link>
       </p>
     </div>
   </Layout>

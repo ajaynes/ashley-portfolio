@@ -24,20 +24,31 @@ export default () => (
           style={{ marginTop: 15, marginBottom: 15 }}
         >
           <li>
-            <a href="https://github.com/ajaynes">
+            <a
+              href="https://github.com/ajaynes"
+              aria-label="View my GitHub profile"
+            >
               <i className="icon-github-circled" />
             </a>
           </li>
 
           <li>
-            <a href="https://www.linkedin.com/in/ashleyjaynes/">
+            <a
+              href="https://www.linkedin.com/in/ashleyjaynes/"
+              aria-label="View my LinkedIn profile"
+            >
               <i className="icon-linkedin" />
             </a>
           </li>
         </ul>
         <footer className="has-text-centered">
           © {new Date().getFullYear()},{` `}
-          <a href="https://ashleyjaynes.com">Ashley Jaynes</a>
+          <a
+            aria-label="Return to current site"
+            href="https://ashleyjaynes.com"
+          >
+            Ashley Jaynes
+          </a>
         </footer>
       </>
     )}

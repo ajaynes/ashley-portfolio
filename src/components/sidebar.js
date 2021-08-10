@@ -41,15 +41,6 @@ export default () => (
             </a>
           </li>
         </ul>
-        <footer className="has-text-centered">
-          © {new Date().getFullYear()},{` `}
-          <a
-            aria-label="Return to current site"
-            href="https://ashleyjaynes.com"
-          >
-            Ashley Jaynes
-          </a>
-        </footer>
       </>
     )}
   />

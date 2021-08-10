@@ -35,7 +35,7 @@ const Layout = ({ children }) => {
           className="columns is-variable is-1-mobile is-2-tablet is-2-desktop is-2-widescreen is-4-fullhd"
           style={{ margin: 0 }}
         >
-          <div className="column is-one-quarter no-padding">
+          <div className="column is-one-third-tablet no-padding">
             <div
               className="card card-margin"
               style={{ position: "sticky", top: 25 }}
@@ -50,6 +50,15 @@ const Layout = ({ children }) => {
               <main>{children}</main>
               <Download />
             </div>
+            <footer className="has-text-centered" style={{marginTop: '15px'}}>
+          © {new Date().getFullYear()},{` `}
+          <a
+            aria-label="Return to current site"
+            href="https://ashleyjaynes.com"
+          >
+            Ashley Jaynes
+          </a>
+        </footer>
           </div>
         </div>
         <div className="is-hidden-touch">

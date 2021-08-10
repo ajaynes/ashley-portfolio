@@ -25,7 +25,7 @@ export default () => (
               {data.markdownRemark.frontmatter.title}
             </h1>
             <h2
-              className="subtitle is-uppercase has-text-weight-normal is-size-4"
+              className="subtitle is-uppercase has-text-weight-normal is-size-6"
               style={{ marginBottom: 15 }}
             >
               {data.markdownRemark.frontmatter.subtitle}

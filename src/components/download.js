@@ -1,5 +1,5 @@
 import React from "react"
-import resume from "../images/resume2019.pdf"
+import resume from "../images/Ashley-Jaynes-Resume.pdf"
 
 const Download = () => {
   return (

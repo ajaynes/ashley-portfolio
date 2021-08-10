@@ -11,7 +11,7 @@ const Navigation = () => {
             <span className="is-pulled-right">About</span>
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link
             to="/portfolio/"
             activeClassName="is-active"
@@ -20,7 +20,7 @@ const Navigation = () => {
             <i className="icon-camera" />
             <span className="is-pulled-right">Portfolio</span>
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link
             to="/contact/"
